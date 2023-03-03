@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/orders_screen.dart';
+import '../screens/user_products_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -25,7 +26,14 @@ class MainDrawer extends StatelessWidget {
             title: const Text('Orders'),
             onTap: () => Navigator.of(context)
                 .pushReplacementNamed(OrdersScreen.routeName),
-          )
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.edit),
+            title: const Text('Manage Products'),
+            onTap: () => Navigator.of(context)
+                .pushReplacementNamed(UserProductsScreen.routeName),
+          ),
         ],
       ),
     );
